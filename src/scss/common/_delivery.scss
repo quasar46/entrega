@@ -1,0 +1,28 @@
+.delivery__wrap {
+    display: flex;
+    gap: 124px;
+}
+
+.delivery__block {
+    h2.title {
+        text-align: left;
+        margin-bottom: 24px;
+    }
+}
+
+.delivery__content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.delivery__item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    h4 {
+        font-size: 24px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+}

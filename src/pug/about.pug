@@ -1,0 +1,35 @@
+extends layout
+block main 
+	main
+		section.first-section 
+			.container
+				.about__wrap 
+					h1.title О компании
+		section.about 
+			.container
+				.about__wrap
+					h2.title Мы - эксперты в поставках <br> приводной технике
+					.swiper.about__items 
+						.swiper-wrapper
+							.swiper-slide
+								.item
+									h3 <span>в наличии</span> стандартные серии
+									p Доставка в регионы Москвы и близлежащие районы всего за 2 дня. В другие регионы — в зависимости от местоположения. Самовывоз — получить ваш заказ в тот же день,
+							.swiper-slide
+								.item
+									h3 товары <span>под заказ</span>
+									p Возможность заказать товары напрямую от производителя с гарантированной доставкой в кратчайшие сроки. *Срок оставки заказа составляет от 30 дней,
+							.swiper-slide
+								.item
+									h3 <span>Гарантия</span> от 1 года
+									p Действует на товары всех производителей.
+							.swiper-slide
+								.item
+									h3 <span>ВЫБОР</span> ДОСТАВКИ
+									.item__delivery
+										img(src=require('../images/d1.png'), alt='')
+										img(src=require('../images/d2.png'), alt='')
+										img(src=require('../images/d3.png'), alt='')
+
+
+		include modules/partners

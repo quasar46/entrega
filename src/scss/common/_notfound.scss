@@ -1,0 +1,17 @@
+.notfound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-image: url("../images/404.svg"), url("../images/image_bg.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center;
+    background-size: contain, cover;
+    // padding: 450px 0;
+    padding: 300px 0;
+    @media (max-width: 639px) {
+        // padding: 369px 0;
+        padding: 100px 0;
+    }
+}

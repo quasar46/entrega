@@ -1,0 +1,49 @@
+header.header
+	.header__wrap 
+		.header__top 
+			.container
+				span Поставки приводной техники
+				.header__nav 
+					a(href="delivery.html") Доставка и оплата
+					a(href="about.html") О компании
+					a(href="contacts.html") Контакты
+				.header__contacts 
+					a.header__contacts-tel(href="tel:+79660717555") +7 (966) 07-17-555
+					a.header__contacts-mail(href="mailto:info@entrega-in.com") info@entrega-in.com
+		.header__bottom 
+			.container
+				a(href="/").header__logo
+					img(src=require('../../images/logo.svg'), alt='')
+				.header__selects 
+					select.mySelect
+						option(value="") Преобразователи частоты
+						option(value="") Преобразователи частоты
+						option(value="") Преобразователи частоты
+					select.mySelect
+						option(value="") Устройства плавного пуска
+						option(value="") Устройства плавного пуска 
+						option(value="") Устройства плавного пуска 
+					select.mySelect
+						option(value="") Запасные части
+						option(value="") Запасные части
+						option(value="") Запасные части
+				.header__btns
+					button.header__search 
+						img(src=require('../../images/search.svg'), alt='')
+					button.header__basket
+						img(src=require('../../images/basket.svg'), alt='')
+					button.burger
+						img(src=require('../../images/burger-icn.svg'), alt='')
+						span Меню
+	.overlay
+		.main-menu
+			button.main-menu__close
+				img(src=require('../../images/close.svg'), alt='')
+			.main-menu__wrap
+				a(href="") Каталог
+				a(href="") О компании
+				a(href="") Клиентам
+				a(href="") Новости
+				a(href="") Контакты
+				a(href="tel:+79660717555") +7 (966) 07-17-555
+				button.btn.btn--second Связаться с нами

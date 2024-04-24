@@ -1,0 +1,62 @@
+.steps__items {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    .item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        border-radius: 8px;
+        color: #fff;
+        text-align: center;
+        background: linear-gradient(
+            271.61deg,
+            #0a0a0a 1.36%,
+            #0a0a0a 1.36%,
+            #171717 50.19%,
+            #0a0a0a 100%
+        );
+        color: #fff;
+        padding: 24px;
+        h3 {
+            font-size: 40px;
+            font-weight: 600;
+            text-transform: uppercase;
+            @media (max-width: 1439px) {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 639px) {
+            gap: 16px;
+        }
+    }
+    .item__text {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        max-width: 490px;
+    }
+}
+
+.item__icn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 24px;
+    top: 24px;
+    @media (max-width: 639px) {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.stes__close {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    width: 40px;
+    height: 40px;
+}

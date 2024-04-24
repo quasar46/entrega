@@ -1,0 +1,97 @@
+extends layout
+block main 
+	main
+		section.main-block 
+			.container
+				.main-block__wrap
+					.main-block__content
+						h1.header__title Поставки приводной техники для промышленности
+						span.header__subtitle с доставкой в любую точку России и стран Таможенного Союза
+						a.btn.btn--main Открыть каталог
+					img(src=require('../images/main-pic.png'), alt='')
+
+		section.catalog-block.--dark
+			.container 
+				.catalog-block__wrap
+					span.uptitle Каталог
+					h2.title Выберите подходящую <br> категорию товаров
+					.catalog-block__wrap 
+						.catalog-block__category
+							a(href="").item
+								h3 Преобразователи <br> частоты
+							a(href="").item
+								h3 Устройства <br> плавного пуска
+							a(href="").item
+								h3 запасные части
+
+					a(href="").btn.btn--main Открыть каталог
+
+					.catalog-block__footer 
+						span Каталог регулярно дополняется. 
+						span Если вы не нашли подходящий товар, <br> свяжитесь с нами
+						a.btn.btn--second Связаться
+
+		include modules/partners
+
+		section.steps
+			.container 
+				.steps__wrap 
+					span.uptitle как получить товар?
+					h2.title 3 шага до получения товара
+					.steps__items 
+						.item
+							button.stes__close 
+								img(src=require('../images/close.svg'), alt='')
+							h3 Выбор товара
+							.item__text
+								p Выберите товар из каталога и добавьте его в корзину. В корзине заполните форму обратной связи.
+								p В течении 30 минут с вами свяжется меннеджер, чтобы подтвертидь заказ и ответить на все инетерсующие вас вопросы.
+							a.btn.btn--second(href="")  Открыть каталог
+							img.item__icn(src=require('../images/icn1.png'), alt='')
+						.item
+							button.stes__close 
+								img(src=require('../images/close.svg'), alt='')
+							h3 Оплата товара
+							.item__text
+								p Выставляем счёт после оформления заказа и обсуждения всех условий доставки с меннеджером.
+							a.btn.btn--second(href="")  Связаться
+							img.item__icn(src=require('../images/icn1.png'), alt='')
+						.item
+							button.stes__close 
+								img(src=require('../images/close.svg'), alt='')
+							h3 Доставка или самовывоз
+							.item__text
+								p Точные сроки доставки в зависимости от выбранного способа или транспортной компанией. Стоимость доставки транспортной компании индивидуальна и будет рассчитана после оформления заказа.
+								p Самовывоз по адресу МО, г. Химки, Вашутинское шоссе 24Б
+							a.btn.btn--second(href="")  Связаться
+							img.item__icn(src=require('../images/icn1.png'), alt='')
+
+		section.feedback 
+			.container 
+				.feedback__wrap 
+					h2.title Не нашли подходящий товар или <br> нужна помощь специалиста?
+					span.feedback__subtitle Оставьте заявку и мы подберем всё, что <br> нужно под ваши задачи.
+					form.feedback__form
+						.feedback__values
+							input(type="text" placeholder="ФИО")
+							input.tel(type="text")
+							textarea(placeholder="Комментарий (по желанию)")
+						button.btn.btn--dark(type="submit") Отправить
+
+		section.news-block 
+			.container 
+				.news-block__wrap 
+					span.uptitle Новости
+					h2.title Последние новости и события<br> в мире приводной техники
+					.swiper.news-block__items
+						.swiper-wrapper 
+							a(href="").swiper-slide.item
+								span.item__date 12.02.2024
+								h3 Преобразователи частоты LCI по сниженным ценам
+							a(href="").swiper-slide.item
+								span.item__date 12.02.2024
+								h3 Преобразователи частоты LCI по сниженным ценам
+							a(href="").swiper-slide.item
+								span.item__date 12.02.2024
+								h3 Преобразователи частоты LCI по сниженным ценам
+

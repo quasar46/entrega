@@ -1,0 +1,28 @@
+.btn {
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 60px;
+    text-transform: uppercase;
+    padding-left: 16px;
+    padding-right: 16px;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    &--main {
+        background: var(--color-green-gradiend);
+        color: var(--color-base);
+    }
+    &--second {
+        border: 2px solid #b2ff2e;
+        border-radius: 60px;
+        color: #fff;
+    }
+    &--dark {
+        background-color: #0a0a0a;
+        color: #fff;
+    }
+  
+}
