@@ -6,12 +6,16 @@
 .product__wrap {
     display: grid;
     grid-template-columns: auto 524px;
+    align-items: flex-start;
     gap: 16px;
     h3 {
         font-size: 32px;
         font-weight: 500;
         text-transform: uppercase;
         margin-bottom: 16px;
+    }
+    @media(max-width: 1439px) {
+        grid-template-columns: auto 384px;
     }
 }
 
@@ -48,6 +52,9 @@
 .product__btns {
     display: flex;
     gap: 40px;
+    @media(max-width: 1439px) {
+        gap: 24px;
+    }
 }
 
 .product__btn {
@@ -75,6 +82,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 35px 0;
+    border-radius: 16px;
 }
 
 .product__ac {
