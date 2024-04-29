@@ -7,7 +7,7 @@ block main
 					.main-block__content
 						h1.header__title Поставки приводной техники для промышленности
 						span.header__subtitle с доставкой в любую точку России и стран Таможенного Союза
-						a.btn.btn--main Открыть каталог
+						a(href="/catalog.html").btn.btn--main Открыть каталог
 					img(src=require('../images/main-pic.png'), alt='')
 
 		section.catalog-block.--dark
@@ -38,45 +38,38 @@ block main
 				.steps__wrap 
 					span.uptitle как получить товар?
 					h2.title 3 шага до получения товара
-					.steps__items 
-						.item
+					.accordion-container.steps__items 
+						.ac.item
 							button.stes__close 
 								img(src=require('../images/close.svg'), alt='')
-							h3 Выбор товара
-							.item__text
-								p Выберите товар из каталога и добавьте его в корзину. В корзине заполните форму обратной связи.
-								p В течении 30 минут с вами свяжется меннеджер, чтобы подтвертидь заказ и ответить на все инетерсующие вас вопросы.
-							a.btn.btn--second(href="")  Открыть каталог
-							img.item__icn(src=require('../images/icn1.png'), alt='')
-						.item
+							h3.ac-header.ac-trigger Выбор товара
+							.ac-panel
+								.item__text
+									p Выберите товар из каталога и добавьте его в корзину. В корзине заполните форму обратной связи.
+									p В течении 30 минут с вами свяжется меннеджер, чтобы подтвертидь заказ и ответить на все инетерсующие вас вопросы.
+								a.btn.btn--second(href="")  Открыть каталог
+								img.item__icn(src=require('../images/icn1.png'), alt='')
+						.ac.item
 							button.stes__close 
 								img(src=require('../images/close.svg'), alt='')
-							h3 Оплата товара
-							.item__text
-								p Выставляем счёт после оформления заказа и обсуждения всех условий доставки с меннеджером.
-							a.btn.btn--second(href="")  Связаться
-							img.item__icn(src=require('../images/icn1.png'), alt='')
-						.item
+							h3.ac-header.ac-trigger Оплата товара
+							.ac-panel
+								.item__text
+									p Выставляем счёт после оформления заказа и обсуждения всех условий доставки с меннеджером.
+								a.btn.btn--second(href="")  Связаться
+								img.item__icn(src=require('../images/icn1.png'), alt='')
+						.ac.item
 							button.stes__close 
 								img(src=require('../images/close.svg'), alt='')
-							h3 Доставка или самовывоз
-							.item__text
-								p Точные сроки доставки в зависимости от выбранного способа или транспортной компанией. Стоимость доставки транспортной компании индивидуальна и будет рассчитана после оформления заказа.
-								p Самовывоз по адресу МО, г. Химки, Вашутинское шоссе 24Б
-							a.btn.btn--second(href="")  Связаться
-							img.item__icn(src=require('../images/icn1.png'), alt='')
+							h3.ac-header.ac-trigger Доставка или самовывоз
+							.ac-panel
+								.item__text
+									p Точные сроки доставки в зависимости от выбранного способа или транспортной компанией. Стоимость доставки транспортной компании индивидуальна и будет рассчитана после оформления заказа.
+									p Самовывоз по адресу МО, г. Химки, Вашутинское шоссе 24Б
+								a.btn.btn--second(href="")  Связаться
+								img.item__icn(src=require('../images/icn1.png'), alt='')
 
-		section.feedback 
-			.container 
-				.feedback__wrap 
-					h2.title Не нашли подходящий товар или <br> нужна помощь специалиста?
-					span.feedback__subtitle Оставьте заявку и мы подберем всё, что <br> нужно под ваши задачи.
-					form.feedback__form
-						.feedback__values
-							input(type="text" placeholder="ФИО")
-							input.tel(type="text")
-							textarea(placeholder="Комментарий (по желанию)")
-						button.btn.btn--dark(type="submit") Отправить
+		include modules/feedback
 
 		section.news-block 
 			.container 

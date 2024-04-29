@@ -42,14 +42,23 @@
 }
 
 .header__bottom {
+    position: fixed;
+    width: 100%;
     padding-top: 16px;
     border-radius: 0 0 16px 16px;
+    z-index: 100;
+    background-color: var(--color-base);
     .container {
         display: flex;
         align-items: center;
         @media (max-width: 1439px) {
             justify-content: space-between;
         }
+    }
+    transition: all 0.3s ease;
+    &.sh-stop {
+        margin-top: 0 !important;
+        transition: all 0.3s ease;
     }
 }
 

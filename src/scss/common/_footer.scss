@@ -234,6 +234,7 @@
         "flist fcontacts fclients";
     align-items: flex-start;
     padding: 80px 0;
+    justify-content: space-between;
     @media (max-width: 1439px) {
         padding: 64px 0;
     }

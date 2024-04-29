@@ -1,0 +1,66 @@
+extends layout
+block main 
+	main
+		section.first-section 
+			.container 
+				h1.title Доставка и оплата
+		section.product 
+			.container 
+				.product__wrap
+					.product__content
+						h3 Преобразователь частоты Danfos  (132F0003)
+						.product__order
+							.product__price 
+								span 32 965 руб
+								p НДС включен в цену
+							button.btn.btn--main Быстрый заказ
+							.product__btns
+								button.prodiuct__btn
+									img(src=require('../images/calc-icn.svg'), alt='')
+								button.product__btn
+									img(src=require('../images/basket-icn.svg'), alt='')
+						.product__spec
+							h3 Характеристики
+							ul.product__list
+								li 
+									span Полное название
+									span Устройство плавного пуска SBI-18.5/37-04 (61500) INSTART
+								li
+									span Серия
+									span  VFD-EL
+								li 
+									span Напряжение, В
+									span 380
+								li 
+									span Мощность, кВт
+									span 1.5
+								li 
+									span Ток, А
+									span 4.2
+
+						.accordion-container.product__ac
+							.ac
+								h4.ac-trigger Все характеристики
+								.ac-panel 
+							.ac
+								h4.ac-trigger Документация
+								.ac-panel
+									a(href="" download) 
+										img(src=require('../images/file-down.svg'), alt='')
+										| Название документа 
+									a(href="" download) 
+										img(src=require('../images/file-down.svg'), alt='')
+										| Название документа 
+									a(href="" download) 
+										img(src=require('../images/file-down.svg'), alt='')
+										| Название документа 
+									a(href="" download) 
+										img(src=require('../images/file-down.svg'), alt='')
+										| Название документа 
+									a(href="" download) 
+										img(src=require('../images/file-down.svg'), alt='')
+										| Название документа 
+
+					.product__pic
+						img(src=require('../images/product1.png'), alt='')
+

@@ -2,7 +2,7 @@
     position: fixed;
     display: flex;
     top: 0;
-    right: 0;
+    right: -100%;
     min-width: 408px;
     height: 100%;
     justify-content: flex-end;
@@ -52,7 +52,11 @@
     visibility: hidden;
     &.active {
         opacity: 1;
-        z-index: 1;
+        z-index: 101;
         visibility: visible;
+        .main-menu {
+            right: 0;
+            transition: all 0.3s ease;
+        }
     }
 }

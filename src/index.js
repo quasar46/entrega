@@ -1,17 +1,15 @@
 import './fonts/stylesheet.scss';
-// import 'jquery';
-// import 'jquery/dist/jquery'
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import Accordion from 'accordion-js';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-// import 'accordion-js/dist/accordion.min.css';
 import customSelect from 'custom-select';
-// import StickyHeader from "@oveleon/sticky-header";
-import './scss/styles.scss';
+import StickyHeader from "@oveleon/sticky-header";
 import './static/js/map'
+import './scss/styles.scss';
+// import 'accordion-js/dist/accordion.min.css';
 
 document.addEventListener('DOMContentLoaded', function () {
 	customSelect(document.querySelectorAll('.mySelect'));
@@ -21,32 +19,50 @@ document.addEventListener('DOMContentLoaded', function () {
 	const closeMainMenu = document.querySelector('.main-menu__close')
 	const overlay = document.querySelector('.overlay')
 
-	burger.addEventListener('click', function () {
+	function openMenu() {
 		overlay.classList.toggle('active')
 		body.style.overflow = 'hidden'
-	})
-	closeMainMenu.addEventListener('click', function () {
+	}
+
+	function closeMenu() {
 		overlay.classList.remove('active')
 		body.style.overflow = ''
+	}
+	burger.addEventListener('click', function () {
+		openMenu()
 	})
 
+	closeMainMenu.addEventListener('click', function () {
+		closeMenu()
+	})
 
-	// new StickyHeader({
-	// 	selector: 'header',             // Header or container selector
-	// 	linkSelector: 'a, strong',
-	// 	scrollSettings: {
-	// 		startHeight: 100,           // Starting height for the container
-	// 		stopHeight: 100,             // StopHeight for the container after reaching the stopPosition
-	// 		stopPosition: 200,          // Container will shrink to stopHeight until reaching this position
-	// 		breakPosition: 600,         // Hide position
-	// 	},
-	// 	classes: {
-	// 		useClasses: true,          // Toggle classes on or off
-	// 		isOpen: 'sh-open',          // Visible and fully open
-	// 		onStop: 'sh-stop'           // stopHeight reached
-	// 	},
+	overlay.addEventListener('click', function (e) {
+		if (e.target.classList.contains('overlay')) {
+			closeMenu()
+		}
+	})
 
-	// });
+	const headerBottom = document.querySelector('.header__bottom')
+	const headerTop = document.querySelector('.header__top').offsetHeight
+	headerBottom.style = `margin-top: ${headerTop}px`
+
+
+	new StickyHeader({
+		selector: '.header__bottom',             // Header or container selector
+		linkSelector: 'a, strong',
+		scrollSettings: {
+			startHeight: 100,           // Starting height for the container
+			stopHeight: 100,             // StopHeight for the container after reaching the stopPosition
+			stopPosition: 1,          // Container will shrink to stopHeight until reaching this position
+			breakPosition: 600,         // Hide position
+		},
+		classes: {
+			useClasses: true,          // Toggle classes on or off
+			isOpen: 'sh-open',          // Visible and fully open
+			onStop: 'sh-stop'           // stopHeight reached
+		},
+
+	});
 
 	const swiper = new Swiper('.news-block__items', {
 		slidesPerView: 3,
@@ -66,6 +82,11 @@ document.addEventListener('DOMContentLoaded', function () {
 			slidesPerView: "auto",
 		})
 	}
+
+	if (document.querySelector('.accordion-container')) {
+		new Accordion('.accordion-container');
+	}
+
 
 
 

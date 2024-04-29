@@ -1,5 +1,11 @@
 .feedback {
-    background-image: url("../images/bg3.jpg");
+    background-image: url("../images/feedback-bg.png"), url("../images/bg3.jpg");
+    background-size: 1205px auto, cover;
+    background-position: center bottom, center;
+    background-repeat: no-repeat;
+    @media (max-width: 1023px) {
+        background-size: contain, cover;
+    }
 }
 
 .feedback__wrap {

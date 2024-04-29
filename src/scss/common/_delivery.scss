@@ -1,12 +1,29 @@
 .delivery__wrap {
     display: flex;
     gap: 124px;
+    @media (max-width: 1439px) {
+        gap: 15px;
+    }
+    @media (max-width: 1023px) {
+        flex-direction: column;
+        gap: 24px;
+    }
 }
 
 .delivery__block {
+    p {
+        text-transform: uppercase;
+    }
     h2.title {
         text-align: left;
         margin-bottom: 24px;
+
+        @media (max-width: 1439px) {
+            font-size: 32px;
+        }
+        @media (max-width: 639px) {
+            font-size: 22px;
+        }
     }
 }
 
@@ -20,9 +37,11 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    h4 {
-        font-size: 24px;
-        font-weight: 500;
+    h5 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    p {
         text-transform: uppercase;
     }
 }

@@ -6,7 +6,7 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        // gap: 24px;
         align-items: center;
         border-radius: 8px;
         color: #fff;
@@ -20,17 +20,18 @@
         );
         color: #fff;
         padding: 24px;
+        overflow: hidden;
         h3 {
             font-size: 40px;
             font-weight: 600;
             text-transform: uppercase;
+            cursor: pointer;
             @media (max-width: 1439px) {
                 font-size: 22px;
             }
         }
-
         @media (max-width: 639px) {
-            gap: 16px;
+            padding: 16px;
         }
     }
     .item__text {
@@ -38,6 +39,17 @@
         flex-direction: column;
         gap: 8px;
         max-width: 490px;
+        margin-top: 24px;
+        @media (max-width: 639px) {
+            margin-top: 16px;
+        }
+    }
+    .ac-panel {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        overflow: hidden;
     }
 }
 
@@ -57,6 +69,10 @@
     position: absolute;
     right: 24px;
     top: 24px;
-    width: 40px;
-    height: 40px;
+    width: 24px;
+    height: 24px;
+    @media (max-width: 639px) {
+        right: 16px;
+        top: 16px;
+    }
 }
